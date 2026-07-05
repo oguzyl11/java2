@@ -1,8 +1,8 @@
 package This;
 
 public class Kisi {
-	int ad;
-	Kisi(int ad ){
+	String ad;
+	Kisi(String ad ){
 		this.ad = ad;
 	}
 	
@@ -10,14 +10,14 @@ public class Kisi {
 }
 class Calisan extends Kisi{
 	int maas;
-	Calisan(int maas,int ad){
+	Calisan(int maas,String ad){
 		super(ad);
 		this.maas = maas;
 	}
 }
 class Mudur extends Calisan {
 	String ekip;
-	Mudur (String ekip , int maas , int ad){
+	Mudur (String ekip , int maas , String ad){
 		super(maas, ad);
 		this.ekip = ekip ;
 		
