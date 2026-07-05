@@ -1,7 +1,19 @@
 package This;
 
 public class Kutuphane {
-	public class Yayin {
+	 public static void main(String[] args) {   // <-- SADECE BU SATIRI DEĞİŞTİR
+	        Yayin yayin = new Yayin();
+	        yayin.bilgiGoster();
+	        Kitap kitap = new Kitap("Suç ve Ceza", "Dostoyevski", 550);
+	        kitap.bilgiGoster();
+	        EKitap eKitap = new EKitap("Java Rehberi", "Ferhat Uçar", 300, 15.5);
+	        eKitap.bilgiGoster();
+	        System.out.println(Yayin.toplamYayinSayisi);
+	        System.out.println(eKitap instanceof Kitap);
+	        System.out.println(eKitap instanceof Yayin);
+	    }
+}
+class Yayin {
 		String baslik,yazar;
 		static int toplamYayinSayisi;
 		Yayin(String baslik,String yazar){
@@ -10,8 +22,8 @@ public class Kutuphane {
 			toplamYayinSayisi++;
 		}
 		Yayin(){
-			this.baslik = "Isimisz Yayin";
-			this.yazar = "Bilinmiyor";
+			this("Isimsiz Yayin","Bilinmiyor");
+			
 			
 		}
 		void bilgiGoster(){
@@ -19,7 +31,7 @@ public class Kutuphane {
 			
 		}
 	}
-	public class Kitap extends Yayin{
+ class Kitap extends Yayin{
 		int sayfaSayisi;
 		Kitap(String baslik , String yazar , int sayfaSayisi){
 			super (baslik,yazar);
@@ -35,5 +47,28 @@ public class Kutuphane {
 			
 		}
 	}
+ class EKitap extends Kitap {
+		double dosyaBoyutuMB;
+		EKitap (String baslik, String yazar , int sayfaSayisi , double dosyaBoyutuMB){
+			super(baslik,yazar,sayfaSayisi);
+			this.dosyaBoyutuMB =dosyaBoyutuMB;
+			
+		}
+		@Override
+		void bilgiGoster() {
+			super.bilgiGoster();
+			System.out.println("  "+dosyaBoyutuMB+"  ");
+			
+		}
+		
+		
+	}
+	
 
-}
+			
+	
+		
+		
+		
+		
+		
