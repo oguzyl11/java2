@@ -5,8 +5,12 @@ public class Arac {
 	int hiz ;
 	void bilgiGoster() {
 		System.out.println(marka+"  "+ hiz );
-		
 	}
+	Arac( String marka , int hiz ) {	
+		this.marka = marka ;
+		this.hiz = hiz ;
+   }
+}
 	class Otomobil extends Arac {
 		int kapiSayisi;
 		@Override
@@ -15,11 +19,11 @@ public class Arac {
 			System.out.println(""+this.kapiSayisi+"");
 		}
 		Otomobil (int kapiSayisi ,int hiz , String marka ){
-			super();
+			super(marka,hiz);
 			this.kapiSayisi = kapiSayisi;
 			
 		}
 	}
 
 	
-}
+
