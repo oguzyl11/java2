@@ -16,7 +16,12 @@ public class Ogrenci {
 		if (not <= 100) {
 			if(0 <= not) {
 			    this.not = not;
-		}}
+		       }
+			else {
+				System.out.println("Hatalı not girişi");
+				
+			}
+			}
 		else {
 			System.out.println("Hatalı not girişi");
 			
