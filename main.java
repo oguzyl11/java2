@@ -10,6 +10,13 @@ public class Main {
 	hayvanlar[1] = new Kopek();
 	for(Hayvan h : hayvanlar){
 		h.sesCikar();
-		
+		Sekil[] sekiller = new Sekil[2];
+        sekiller[0] = new Daire(5);
+        sekiller[1] = new Dikdortgen(4, 6);
+
+        for (Sekil s : sekiller) {
+            s.alanHesapla();
+	
 	}}
-}
+
+	}}
